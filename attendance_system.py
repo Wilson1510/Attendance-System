@@ -323,9 +323,9 @@ faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 maskNet = load_model(args["model"])
 
 scope = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive.file', 'https://www.googleapis.com/auth/drive']
-credentials = ServiceAccountCredentials.from_json_keyfile_name('hadir.json', scope)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('hadir.json', scope) #change with your own json
 gc = gspread.authorize(credentials)
-spreadsheet_name = 'data kehadiran'
+spreadsheet_name = 'data kehadiran' #change with yours
 spreadsheet = gc.open(spreadsheet_name).sheet1
 
 day_string = terjemahan_hari()
